@@ -49,3 +49,36 @@
 
 (println (spellWordWrong "qwerty"))
 (println (findLen (spellWordWrong "qwerty")))
+
+(defn squareNum
+  [x]
+  (* x x)
+  )
+
+(println (squareNum 9))
+
+(defn sumOfSquares
+  [x, y]
+  (+ (squareNum x) (squareNum y))
+     )
+
+(println (sumOfSquares 10 10))
+(defn equal? [x y] (if (= x y) 1 y))
+;;if x is equal to y return 1 else return y
+(println (equal? 3 3))
+
+
+(defn add2 [a b] (+ 2 (if (> a b) a b)))
+(println (add2 10 1))
+
+(defn addLargest
+  [x, y,z]
+  (cond
+    (and (> x z) (> y z)) (+ x y)
+    (and (> y x) (> z x)) (+ y z)
+    (and (> z y ) (> x y)) (+ z y)
+    ):else (+ x z)
+  )
+;;compares the values and adds the largest two together
+
+(println (addLargest 10, 2, 3) )
